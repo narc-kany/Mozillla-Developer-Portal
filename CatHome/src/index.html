@@ -1,0 +1,51 @@
+<!--Basics-->
+<!DOCTYPE html >
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Charm:400,700" rel="stylesheet">
+<script>
+
+
+doucument.querySelector('html').onClick = function(){
+  alert("click me ");
+}
+var myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+    var mySrc = myImage.getAttribute('src');
+    if(mySrc === 'images/firefox-icon.png') {
+      myImage.setAttribute ('src','images/firefox2.png');
+    } else {
+      myImage.setAttribute ('src','images/firefox-icon.png');
+    }
+}
+
+var mybutton = document.querySelector('button');
+var headingTest = document.querySelector('h1');
+function UserName(){
+  var myName = prompt("Enter Your Name : ");
+  localStorage.setItem('name',myName);
+  headingTest.TextContent = "Name is" + myName ;
+}
+
+if(!localStorage.getItem('name'))
+  {
+    UserName();
+  }
+else
+  {
+    var nameIn = localStorage.getItem('name');
+    headingTest.TextContent = "Name is" + myName ;
+  }
+mybutton.onclick = function(){
+  setUserName;
+}
+</script>
+<h1></h1>
+<p>My Cat is grumpy<strong> AND
+  <small>cute</small></<strong></p>
+  <em>he<em>is<em>deadly
+    <p>just</p>
+    <p>think</p>
+    <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+    <button>Click to change user</button>
+    <p>A link to mozilla<a href ="https://www.mozilla.org/" title = "Mozilla title" target = "blank"> Click </a>link</p>
